@@ -1,11 +1,23 @@
-import './App.css';
-import Header from './components/shared/Header'
+import React from "react";
+import Wrapper from "./components/shared/Wrapper";
 
-import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
+
+import "./App.css";
+
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 
 function App() {
   return (
-   <Header/>
+    <React.Fragment>
+      <Wrapper>
+        <Router>
+          <Routes>
+            <Route path="/" ></Route>
+            <Route path="/bla"></Route>
+          </Routes>
+        </Router>
+      </Wrapper>
+    </React.Fragment>
   );
 }
 

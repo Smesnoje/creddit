@@ -4,7 +4,7 @@ import './Header.css'
 
 const Header = () => {
   return (
-    <div>Header kurac</div>
+    <div>Header</div>
   )
 }
 export default Header;
