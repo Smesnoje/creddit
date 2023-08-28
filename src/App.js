@@ -7,6 +7,8 @@ function App() {
   return (
    <Header/>
   );
+
+  console.log("vucicu pederu!")
 }
 
 export default App;
