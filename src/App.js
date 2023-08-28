@@ -19,6 +19,8 @@ function App() {
       </Wrapper>
     </React.Fragment>
   );
+
+  console.log("vucicu pederu!")
 }
 
 export default App;
