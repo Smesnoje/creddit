@@ -2,8 +2,10 @@ import React from 'react'
 
 import './Comment.css'
 
-export const Comment = () => {
+const Comment = () => {
   return (
     <div>Comment</div>
   )
 }
+
+export default Comment

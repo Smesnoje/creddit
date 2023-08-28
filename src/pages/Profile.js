@@ -2,8 +2,10 @@ import React from 'react'
 
 import './Profile.css'
 
-export const Profile = () => {
+const Profile = () => {
   return (
     <div>Profile</div>
   )
 }
+
+export default Profile
