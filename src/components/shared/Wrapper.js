@@ -11,6 +11,9 @@ const Wrapper = (props) => {
   return (
     <React.Fragment>
       <Header />
+      <Main>
+        {props.children}
+      </Main>
       <Footer />
     </React.Fragment>
   );

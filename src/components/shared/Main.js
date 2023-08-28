@@ -4,7 +4,9 @@ import './Main.css'
 
 const Main = (props) => {
   return (
-    <div>Main</div>
+    <div>
+      {props.children}
+    </div>
   )
 }
 
