@@ -2,6 +2,7 @@ import React from "react";
 import Wrapper from "./components/shared/Wrapper";
 import Home from "./pages/Home";
 import Profile from "./pages/Profile"
+import User from "./pages/User";
 
 import "./App.css";
 
@@ -15,6 +16,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />}></Route>
             <Route path="/profile" element={<Profile />}></Route>
+            <Route path="/users/:username" element={<User />}></Route>
           </Routes>
         </Wrapper>
       </Router>

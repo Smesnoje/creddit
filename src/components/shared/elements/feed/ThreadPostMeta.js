@@ -1,6 +1,7 @@
 import React from 'react'
-
 import './ThreadPostMeta.css'
+import { Link } from 'react-router-dom'
+
 
 export const ThreadPostMeta = (props) => {
     return (
@@ -8,6 +9,7 @@ export const ThreadPostMeta = (props) => {
             <span className='post-item-wrapper'>
                 <span className="post-author-label">Author:</span>
                 <div className="post-author post-meta-item">{props.author}</div>
+                <Link to={`/users/${props.author}`}>{props.author}</Link>
             </span>
             <span className='post-item-wrapper'>
                 <span className="post-parentThread-label">Thread:</span>
