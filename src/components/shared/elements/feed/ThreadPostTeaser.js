@@ -1,22 +1,20 @@
 import React from "react";
 
+import { ThreadPostMeta } from "./ThreadPostMeta";
+
 import "./ThreadPostTeaser.css";
 
 const ThreadPostTeaser = (props) => {
-  return;
-  <div
+  return <div
     className={`single-post parent-thread-${props.parentThread}`}
     id={`post-${props.id}`}
   >
-    <div className="post-meta">
-      <div className="post-author">{props.author}</div>
-      <div className="post-parentThread">{props.parentThread}</div>
-      <div className="post-published-date">{props.date}</div>
-    </div>
+    <ThreadPostMeta author={props.author} parentThread={props.parentThread} date={props.date} />
     <div className="post-title">{props.title}</div>
 
     <div className="post-content">{props.content}</div>
+    <hr />
   </div>;
 };
 
-export default ThreadPost;
+export default ThreadPostTeaser;

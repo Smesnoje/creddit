@@ -1,0 +1,12 @@
+.post-meta {
+    
+}
+
+.post-meta-item {
+    display: inline;
+    max-width: fit-content;
+}
+
+.post-item-wrapper {
+    margin-right: 15px;
+}
