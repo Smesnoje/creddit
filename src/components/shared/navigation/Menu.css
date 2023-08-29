@@ -1,9 +1,15 @@
-.navlink-default {
-    color: black;
-    text-decoration: none;
+.nav-link__item {
+  color: black;
+  text-decoration: none;
+  margin-right: 20px;
 }
 
-.navlink-active {
-    color: blue;
+.nav-link__item.active {
+  color: blue!important;
+  text-decoration: none;
+}
+
+.nav-link__item:visited{
+    color: black;
     text-decoration: none;
 }

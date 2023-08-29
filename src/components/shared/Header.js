@@ -1,16 +1,19 @@
-import React from 'react'
+import React from "react";
 
-import Menu from './navigation/Menu'
-import Input from './elements/Input'
+import Menu from "./navigation/Menu";
+import Input from "./elements/Input";
+import Search from "./navigation/Search";
 
-import './Header.css'
+import "./Header.css";
 
 const Header = () => {
   return (
-    <div>
+    <header className="main-header">
       <Menu />
-      <Input name='search' type='textarea'/>
-    </div>
-  )
-}
+      <div className="header-search" id="header-search">
+        <Search />
+      </div>
+    </header>
+  );
+};
 export default Header;

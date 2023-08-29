@@ -1,11 +1,12 @@
-import React from 'react'
+import React from "react";
 
-import './ThreadPost.css'
+import "./ThreadPost.css";
 
-const ThreadPost = () => {
-  return (
-    <div>ThreadPost</div>
-  )
-}
+const ThreadPost = (props) => {
+  return;
+  <div className="single-thread" id={`thread-${props.id}`}>
+    ThreadPost
+  </div>;
+};
 
-export default ThreadPost
+export default ThreadPost;

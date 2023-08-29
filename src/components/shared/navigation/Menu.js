@@ -5,20 +5,16 @@ import "./Menu.css"
 
 const Menu = () => {
   return (
-    <div>
+    <div id='main-menu'>
       <NavLink
         to="/"
-        className={({ isActive }) => {
-          return isActive ? "navlink-active" : "navlink-default"
-        }}
+        className="nav-link__item"
       >
         Home
       </NavLink>
       <NavLink
-        to="/profile"
-        className={({ isActive }) => {
-          return isActive ? "navlink-active" : "navlink-default"
-        }}
+          to="/profile"
+          className="nav-link__item"
       >
         Profile
       </NavLink>
