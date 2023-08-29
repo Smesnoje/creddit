@@ -1,6 +1,5 @@
 import React from "react";
 import Header from "./Header";
-import Main from "./Main";
 import Footer from "./Footer";
 
 // import Sidebar from "./Sidebar";
@@ -11,9 +10,9 @@ const Wrapper = (props) => {
   return (
     <React.Fragment>
       <Header />
-      <Main>
+      <main>
         {props.children}
-      </Main>
+      </main>
       <Footer />
     </React.Fragment>
   );

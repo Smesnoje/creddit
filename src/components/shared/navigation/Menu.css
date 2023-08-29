@@ -1,0 +1,9 @@
+.navlink-default {
+    color: black;
+    text-decoration: none;
+}
+
+.navlink-active {
+    color: blue;
+    text-decoration: none;
+}
