@@ -43,6 +43,14 @@ const DUMMY_DATA = [
         publishedDate: "13.02.2023",
         rating: -5
     },
+    {
+        thread: "lopate",
+        author: "m1ndor",
+        title: "jel prodaje neko lopatu malu kasikastu za arheologiju. nudim 20din",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non                              proident, sunt in culpa qui officia  deserunt mollit anim id est laborum.",
+        publishedDate: "1.02.2021",
+        rating: -58996
+    },
 ]
 
 export const Feed = () => {
@@ -56,7 +64,9 @@ export const Feed = () => {
                     author={post.author} 
                     date={post.publishedDate}
                     title={post.title} 
-                    content={post.content} />
+                    content={post.content}
+                    rating={post.rating}
+                    />
             })}
         </div>
     )

@@ -1,15 +1,15 @@
 .nav-link__item {
-  color: black;
+  color: #b9b7c4;
   text-decoration: none;
   margin-right: 20px;
 }
 
 .nav-link__item.active {
-  color: blue!important;
+  color: white!important;
   text-decoration: none;
 }
 
 .nav-link__item:visited{
-    color: black;
+    color: #b9b7c4;
     text-decoration: none;
 }

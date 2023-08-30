@@ -1,3 +1,40 @@
 div {
     margin: 10px;
 }
+
+.single-post {
+    background-color: #2e2e2e;
+    color: white;
+    border-radius: 1em;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.single-post:hover {
+    background-color: #47464d;
+    transition: 1s;
+}
+
+.post-title {
+    font-size: 1.4em;
+    font-weight: 500;
+}
+
+.post-content {
+    font-size: 1.1em;
+    font-weight: 300;
+}
+
+.post-author {
+    color: white;
+}
+
+.post-container, .post-title-content {
+    margin: 0;
+    padding: 0;
+}
+
+.post-title-content {
+    display: inline-block;
+    max-width: 90%;
+}
