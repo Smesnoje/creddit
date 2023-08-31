@@ -9,7 +9,7 @@ const NotFound = (props) => {
   return (
     <div className='not-found-container'>
         <Card className="circle-404">
-            <h1 className='circle-404-text'>Sorry, canno't find that page.</h1>
+            <h1 className='circle-404-text'>Sorry, cannot find that page.</h1>
         </Card>
     </div>
   )
