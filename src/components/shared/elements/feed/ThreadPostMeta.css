@@ -1,24 +1,36 @@
 .post-meta {
-    margin-left: 0;
+    margin: 10px;
 }
 
 .post-meta-item {
     display: inline;
     max-width: fit-content;
+    margin-right: 10px;
 }
 
 .post-item-wrapper {
     margin-right: 0px;
 }
 
-.post-author {
-    font-size: 0.8em;
-}
-
 .post-published-date {
     font-size: 0.8em;
+    color: #a1a1a1;
+}
+
+.post-parent-thread .post-item-link {
+    color: white;
+}
+
+.post-author .post-item-link {
+    font-size: 0.8em;
+    color: #a1a1a1;
 }
 
 .post-item-link {
-    color: white;
+    text-decoration: none;
+}
+
+.post-item-link:hover {
+    color: rgb(144, 253, 244);
+    text-decoration: underline;
 }

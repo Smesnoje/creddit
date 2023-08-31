@@ -5,8 +5,8 @@ import "./Search.css";
 
 const Search = () => {
   return (
-    <div>
-      <Input type="text" labelText="Search"></Input>
+    <div className="search-container">
+      <Input type="text" placeholder="Search"></Input>
     </div>
   );
 };

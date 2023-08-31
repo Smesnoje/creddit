@@ -1,5 +1,12 @@
 .thread-post-rating-wrapper {
-    display: inline-block;
-    max-width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+}
+
+.thread-post-rating-display {
+    min-width: fit-content;
     text-align: center;
 }

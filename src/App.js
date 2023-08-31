@@ -15,8 +15,7 @@ function App() {
         <Wrapper>
           <Routes>
             <Route path="/" element={<Home />}></Route>
-            <Route path="/profile" element={<Profile />}></Route>
-            <Route path="/users/:username" element={<User />}></Route>
+            <Route path="/u/:username" element={<User />}></Route>
           </Routes>
         </Wrapper>
       </Router>

@@ -1,0 +1,13 @@
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto; /* Centers the center item horizontally */
+    position: absolute; /* Center item takes out of normal flow */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.search-container > input {
+    font-size: 1.4em;
+}

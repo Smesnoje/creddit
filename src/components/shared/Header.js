@@ -10,9 +10,7 @@ const Header = () => {
   return (
     <header className="main-header">
       <Menu />
-      <div className="header-search" id="header-search">
-        <Search />
-      </div>
+      <Search />
     </header>
   );
 };

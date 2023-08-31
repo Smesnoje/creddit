@@ -1,8 +1,8 @@
 .main-header {
-  margin: auto;
-  height: 50px;
+  height: 55px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 10px 5%;
   background-color: #2e2e2e;
   color: white;

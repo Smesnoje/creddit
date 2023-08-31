@@ -13,7 +13,7 @@ const Menu = () => {
         Home
       </NavLink>
       <NavLink
-          to="/profile"
+          to="/u/retard_autobus"
           className="nav-link__item"
       >
         Profile

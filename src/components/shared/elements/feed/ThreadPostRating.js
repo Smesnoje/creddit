@@ -5,7 +5,9 @@ import './ThreadPostRating.css'
 const ThreadPostRating = (props) => {
   return (
     <div className='thread-post-rating-wrapper'>
-        {props.rating}
+        <div className='thread-post-rating-display'>
+          {props.rating}
+        </div>
     </div>
   )
 }

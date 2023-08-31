@@ -1,26 +1,28 @@
-div {
-    margin: 10px;
-}
-
 .single-post {
-    background-color: #2e2e2e;
+    transition: 0.3s;
     color: white;
-    border-radius: 1em;
+    border-radius: 20px;
     padding: 10px;
-    margin-bottom: 20px;
+    margin-top: 20px;
+    background-color: #2e2e2e;
+    transition: background-color 2s;
 }
 
 .single-post:hover {
-    background-color: #47464d;
+    background-color: #5f449f;
     transition: 1s;
 }
 
 .post-title {
+    margin: 10px;
+    margin-bottom: 13px;
     font-size: 1.4em;
     font-weight: 500;
+    /* text-shadow: 0px 3px 2px black; */
 }
 
 .post-content {
+    margin: 10px;
     font-size: 1.1em;
     font-weight: 300;
 }
@@ -37,4 +39,11 @@ div {
 .post-title-content {
     display: inline-block;
     max-width: 90%;
+}
+
+.post-container {
+    display: flex;
+    flex-direction: row;
+    flex: 1, 1;
+    margin-bottom: 10px;
 }
