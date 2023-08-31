@@ -7,6 +7,7 @@ import Search from "./navigation/Search";
 import "./Header.css";
 
 const Header = () => {
+
   return (
     <header className="main-header">
       <Menu />

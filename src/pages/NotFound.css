@@ -1,0 +1,19 @@
+.circle-404 {
+    display: flex;
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+    margin: auto;
+    padding: 10px;
+}
+
+.not-found-container {
+    padding-top: 60px;
+}
+
+.circle-404-text {
+    display: inline;
+    width: fit-content;
+    margin: auto;
+    text-align: center;
+}

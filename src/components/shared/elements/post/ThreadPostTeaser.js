@@ -7,7 +7,7 @@ import DivLink from "../DivLink";
 import "./ThreadPostTeaser.css";
 
 const ThreadPostTeaser = (props) => {
-  return <DivLink>
+  return <DivLink to={`t/${props.parentThread}/${props.id}`}>
     <div
       className={`single-post parent-thread-${props.parentThread}`}
       id={`post-${props.id}`}

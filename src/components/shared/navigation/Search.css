@@ -2,12 +2,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 auto; /* Centers the center item horizontally */
-    position: absolute; /* Center item takes out of normal flow */
+    margin: 0 auto;
+    position: absolute;
     left: 50%;
     transform: translateX(-50%);
 }
 
 .search-container > input {
     font-size: 1.4em;
+    width: 600px;
+    background-color: black;
 }

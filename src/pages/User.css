@@ -5,7 +5,14 @@
     align-items: center;
 }
 
+.user-container-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
 .user-image {
+    margin: auto;
     width: 200px;
     height: 200px;
     border-radius: 100%;
@@ -14,7 +21,7 @@
 
 .user-name {
     width: fit-content;
-    margin: 10px 0;
+    margin: 10px auto;
     font-size: 3em;
 }
 

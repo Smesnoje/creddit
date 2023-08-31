@@ -1,16 +1,17 @@
 .single-post {
-    transition: 0.3s;
     color: white;
     border-radius: 20px;
     padding: 10px;
     margin-top: 20px;
-    background-color: #2e2e2e;
-    transition: background-color 2s;
+    background-color: #000000;
+    transition: background-color 0.7s;
 }
 
 .single-post:hover {
-    background-color: #5f449f;
-    transition: 1s;
+    background-color: #2e2e2e;
+    /* background-color: #5f449f; */
+
+    transition: 0.2s;
 }
 
 .post-title {

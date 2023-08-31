@@ -1,6 +1,7 @@
 import React from 'react'
 import { useParams } from 'react-router-dom';
 
+import UserFeed from '../components/UserFeed'
 import Card from '../components/shared/elements/Card';
 
 import './User.css'
@@ -13,6 +14,7 @@ const User = (props) => {
   return (
 
     <div className='user-container'>
+      <Card className='user-container-card'>
       <img className='user-image' src="https://c.cdnmp.net/241860914/p/l/5/bullyland-patuljak-uca-snezana-i-7-patuljaka-12476-c~1073075.jpg" alt="patuljak"></img>
       <div className='user-name'>{passedUsername}</div>
       <div className='user-bio'>
@@ -20,6 +22,8 @@ const User = (props) => {
           Ja sam mali patuljak zarobljen u zvucniku...
         </Card>
       </div>
+      </Card>
+      <UserFeed author={passedUsername} />
     </div>
   )
 }
