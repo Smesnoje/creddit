@@ -11,5 +11,6 @@
 .search-container > input {
     font-size: 1.4em;
     width: 600px;
+    height: 50px;
     background-color: black;
 }

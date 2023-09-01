@@ -10,7 +10,8 @@ const Thread = () => {
   const passedThread = useParams().thread
 
   return (
-    <div>
+    <div className='thread-container'>
+      <h1>{passedThread}</h1>
       <ThreadFeed thread={passedThread}/>
     </div>
   )

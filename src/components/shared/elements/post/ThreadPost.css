@@ -1,7 +1,18 @@
 .thread-post {
     color: white;
     border-radius: 20px;
-    border: solid white 1px;
+    outline: solid gray 1px;
     padding: 10px;
+}
+
+.thread-post-border {
+    position: relative;
     margin-top: 20px;
+    color: white;
+    border-radius: 20px;
+    outline: 1px solid gray;
+}
+
+.thread-post-container  {
+    width: 100%
 }

@@ -1,7 +1,7 @@
 import React from "react";
 
-import ThreadPostMeta from "./ThreadPostMeta";
-import ThreadPostRating from "./ThreadPostRating";
+// import ThreadPostMeta from "./ThreadPostMeta";
+// import ThreadPostRating from "./ThreadPostRating";
 import DivLink from "../DivLink";
 
 import "./CommentTeaser.css";

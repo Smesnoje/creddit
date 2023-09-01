@@ -45,6 +45,15 @@ export default [
         rating: 58
     },
     {
+        id: '2',
+        thread: "fudbal",
+        author: "kurcevitirondalno",
+        title: "aj zakoljemo sudiju",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non                              proident, sunt in culpa qui officia  deserunt mollit anim id est laborum.",
+        publishedDate: "1.08.2023",
+        rating: 183
+    },
+    {
         id: '3',
         thread: "tenkovi",
         author: "gavrilo7",
