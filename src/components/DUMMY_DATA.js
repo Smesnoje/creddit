@@ -45,7 +45,7 @@ export default [
         rating: 58
     },
     {
-        id: '2',
+        id: '3',
         thread: "fudbal",
         author: "kurcevitirondalno",
         title: "aj zakoljemo sudiju",
@@ -54,7 +54,7 @@ export default [
         rating: 183
     },
     {
-        id: '3',
+        id: '4',
         thread: "tenkovi",
         author: "gavrilo7",
         title: "ja jako volim tenkove :)",
@@ -81,7 +81,7 @@ export default [
         ]
     },
     {
-        id: '4',
+        id: '5',
         thread: "gatanje",
         author: "svetlanakovilovo",
         title: "1000din gledanje u dlan okolina kovilova",
@@ -90,7 +90,7 @@ export default [
         rating: -5
     },
     {
-        id: '5',
+        id: '6',
         thread: "lopate",
         author: "m1ndor",
         title: "jel prodaje neko lopatu malu kasikastu za arheologiju. nudim 20din",
@@ -125,7 +125,7 @@ export default [
         ]
     },
     {
-        id: '6',
+        id: '7',
         thread: "buvljak",
         author: "ekskalibur",
         title: "prodajem pepeo",
