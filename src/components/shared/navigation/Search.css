@@ -2,10 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    margin-right: auto;
 }
 
 .search-container > input {

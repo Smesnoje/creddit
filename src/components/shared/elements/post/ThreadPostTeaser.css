@@ -10,8 +10,11 @@
 .single-post:hover {
     background-color: #2e2e2e;
     /* background-color: #5f449f; */
-
     transition: 0.2s;
+}
+
+.single-post:hover .post-title {
+    color: rgb(144, 253, 244);
 }
 
 .post-title {
@@ -22,7 +25,7 @@
     /* text-shadow: 0px 3px 2px black; */
 }
 
-.post-content {
+.single-post .post-content {
     margin: 10px;
     font-size: 1.1em;
     font-weight: 300;
