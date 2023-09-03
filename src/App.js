@@ -19,7 +19,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />}></Route>
             <Route path="/u/:username" element={<User />}></Route>
-            <Route path="/t/:thread" element={<Thread />}></Route>
+            <Route path="/t/:thread/" element={<Thread />}></Route>
             <Route path="/t/:thread/:postId" element={<Post />}></Route>
             <Route path="/*" element={<NotFound />}></Route>
 
