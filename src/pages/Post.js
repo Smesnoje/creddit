@@ -1,7 +1,7 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
 
-import ThreadPost from '../components/shared/elements/post/ThreadPost'
+import ThreadPost from '../components/post/ThreadPost'
 
 import './Post.css'
 

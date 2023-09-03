@@ -134,3 +134,6 @@ export default [
         rating: 'infinite'
     },
 ]
+
+const threads = []
+const users = []

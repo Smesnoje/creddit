@@ -4,7 +4,7 @@ import ThreadPostMeta from "./ThreadPostMeta";
 import ThreadPostRating from "./ThreadPostRating";
 import CommentSection from "../comment/CommentSection";
 
-import DUMMY_DATA from "../../../DUMMY_DATA";
+import DUMMY_DATA from "../DUMMY_DATA";
 
 import "./ThreadPost.css";
 

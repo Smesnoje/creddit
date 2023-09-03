@@ -2,7 +2,7 @@ import React from "react";
 
 import ThreadPostMeta from "./ThreadPostMeta";
 import ThreadPostRating from "./ThreadPostRating";
-import DivLink from "../DivLink";
+import DivLink from "../shared/elements/DivLink";
 
 import "./ThreadPostTeaser.css";
 

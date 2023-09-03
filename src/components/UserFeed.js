@@ -1,6 +1,6 @@
 import React from 'react'
 
-import ThreadPostTeaser from './shared/elements/post/ThreadPostTeaser'
+import ThreadPostTeaser from './post/ThreadPostTeaser'
 
 import DUMMY_DATA from './DUMMY_DATA'
 
