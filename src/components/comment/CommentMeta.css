@@ -1,0 +1,36 @@
+.comment-meta {
+    margin: 10px;
+}
+
+.comment-meta-item {
+    display: inline;
+    max-width: fit-content;
+    margin-right: 10px;
+}
+
+.comment-item-wrapper {
+    margin-right: 0px;
+}
+
+.comment-published-date {
+    font-size: 0.8em;
+    color: #a1a1a1;
+}
+
+.comment-parent-thread .comment-item-link {
+    color: white;
+}
+
+.comment-author .comment-item-link {
+    font-size: 0.8em;
+    color: #a1a1a1;
+}
+
+.comment-item-link {
+    text-decoration: none;
+}
+
+.comment-item-link:hover {
+    color: rgb(144, 253, 244);
+    text-decoration: underline;
+}

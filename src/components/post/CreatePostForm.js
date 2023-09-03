@@ -3,7 +3,7 @@ import Input from "../shared/elements/Input";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 
-import DUMMY_DATA from "../DUMMY_DATA";
+import database from "../database";
 
 import "./CreatePostForm.css";
 
@@ -15,7 +15,7 @@ const CreatePostForm = (props) => {
   const PostSubmitHandler = (event) => {
     event.preventDefault();
 
-    DUMMY_DATA.push({
+    database.posts.push({
       id: "42",
       thread: currentThread,
       author: "ekskalibur",

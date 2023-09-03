@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import DUMMY_DATA from "../components/DUMMY_DATA";
+import database from "../components/database";
 
 import ThreadFeed from "../components/ThreadFeed";
 import CreatePostForm from "../components/post/CreatePostForm";

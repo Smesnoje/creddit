@@ -2,12 +2,12 @@ import React from 'react'
 
 import ThreadPostTeaser from './post/ThreadPostTeaser'
 
-import DUMMY_DATA from './DUMMY_DATA'
+import database from './database'
 
 export const Feed = () => {
     return (
         <div id='feed-container'>
-            {DUMMY_DATA.map((post, key) => {
+            {database.posts.map((post, key) => {
                 return <ThreadPostTeaser
                     key={key}
                     id={key} 

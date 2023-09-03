@@ -1,0 +1,17 @@
+.thread-line {
+    height: 100%;
+    display: inline;
+}
+
+.thread-line-body {
+    border-right: solid white 1px;
+    height: 100%;
+    width: 10px;
+    display: inline;
+}
+
+.thread-line-margin {
+    height: 100%;
+    margin: 10px;
+    display: inline;
+}

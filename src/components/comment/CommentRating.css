@@ -1,0 +1,12 @@
+.comment-post-rating-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+}
+
+.comment-post-rating-display {
+    min-width: fit-content;
+    text-align: center;
+}

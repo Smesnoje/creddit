@@ -4,13 +4,13 @@ import ThreadPostMeta from "./ThreadPostMeta";
 import ThreadPostRating from "./ThreadPostRating";
 import CommentSection from "../comment/CommentSection";
 
-import DUMMY_DATA from "../DUMMY_DATA";
+import database from "../database";
 
 import "./ThreadPost.css";
 
 const ThreadPost = (props) => {
 
-  const fetchedPost = DUMMY_DATA.filter((post) => {return post.id === props.id})[0]
+  const fetchedPost = database.posts.filter((post) => {return post.id === props.id})[0]
 
   return <div className="thread-post-container">
     <div className="thread-post-border">
@@ -27,7 +27,7 @@ const ThreadPost = (props) => {
           </div>
         </div>
       </div>
-      <CommentSection />
+      <CommentSection postTitle={fetchedPost.title} />
     </div>
   </div>
 

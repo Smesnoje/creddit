@@ -10,7 +10,6 @@ const User = (props) => {
 
   const passedUsername = useParams().username;
 
-
   return (
 
     <div className='user-container'>

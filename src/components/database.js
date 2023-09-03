@@ -1,0 +1,375 @@
+let database = {};
+
+database.threads = [
+    {
+        name: "buvljak",
+        admin: "kopernikus",
+        mods: ["gugladzija"],
+        dateCreated: "12.09.2023",
+        members: ["kopernikus", "gugladzija"]
+    },
+    {
+        name: "politika",
+        admin: "djoka33",
+        mods: [],
+        dateCreated: "12.09.2023",
+        members: ["djoka33", "marchel0legend",]
+    },
+    {
+        name: "fudbal",
+        admin: "zidan69",
+        mods: [],
+        dateCreated: "12.09.2023",
+        members: ["zidan69", "seksi_maradona", "kurcevitirondalno"]
+    },
+    {
+        name: "lopate",
+        admin: "plecka",
+        mods: [],
+        dateCreated: "12.09.2023",
+        members: ['plecka', 'm1ndor', 'tobogan2']
+    },
+    {
+        name: "gatanje",
+        admin: "treceoko",
+        mods: [],
+        dateCreated: "12.09.2023",
+        members: ['treceoko', 'supermama', 'parabola', 'galaksija100']
+    },
+    {
+        name: "tenkovi",
+        admin: "gavrilo7",
+        mods: [],
+        dateCreated: "12.09.2023",
+        members: ['gavrilo7', 'goki', 'ana893'],
+    },
+    {
+        name: "droga",
+        admin: "nark0man",
+        mods: [],
+        dateCreated: "12.09.2023",
+        members: ['nark0man', 'drogos', 'pera_sluzavac', 'TURBO'],
+    },
+]
+
+database.posts = [
+    {
+        id: '0',
+        thread: "politika",
+        author: "djoka33",
+        title: "Vucic budala",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia  deserunt mollit anim id est laborum.",
+        publishedDate: "12.09.2023",
+        rating: 16,
+    },
+    {
+        id: '1',
+        thread: "droga",
+        author: "nark0man",
+        title: "E BURAZ",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia  deserunt mollit anim id est laborum.",
+        publishedDate: "13.06.2023",
+        rating: -100
+    },
+    {
+        id: '2',
+        thread: "fudbal",
+        author: "seksi_maradona",
+        title: "Kakav fail!",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia  deserunt mollit anim id est laborum.",
+        publishedDate: "13.01.2023",
+        rating: 58
+    },
+    {
+        id: '3',
+        thread: "fudbal",
+        author: "kurcevitirondalno",
+        title: "aj zakoljemo sudiju",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia  deserunt mollit anim id est laborum.",
+        publishedDate: "1.08.2023",
+        rating: 183
+    },
+    {
+        id: '4',
+        thread: "tenkovi",
+        author: "gavrilo7",
+        title: "ja jako volim tenkove :)",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia  deserunt mollit anim id est laborum.",
+        publishedDate: "99.04.2023",
+        rating: 1852,
+    },
+    {
+        id: '5',
+        thread: "gatanje",
+        author: "svetlanakovilovo",
+        title: "1000din gledanje u dlan okolina kovilova",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia  deserunt mollit anim id est laborum.",
+        publishedDate: "13.02.2023",
+        rating: -5
+    },
+    {
+        id: '6',
+        thread: "lopate",
+        author: "m1ndor",
+        title: "jel prodaje neko lopatu malu kasikastu za arheologiju. nudim 20din",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia  deserunt mollit anim id est laborum.",
+        publishedDate: "1.02.2021",
+        rating: -58996,
+    },
+    {
+        id: '7',
+        thread: "buvljak",
+        author: "ekskalibur",
+        title: "prodajem pepeo",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia  deserunt mollit anim id est laborum.",
+        publishedDate: "420.02.2021",
+        rating: 'infinite'
+    },
+]
+
+database.comments = [
+    {
+        id: '0',
+        postId: '6',
+        thread: "lopate",
+        title: "jel prodaje neko lopatu malu kasikastu za arheologiju. nudim 20din",
+        author: "ljubomirlopate2023",
+        content: "Imam ja kolega 22 dinara.",
+        repplyTo: null,
+        publishedDate: "12.09.2023",
+        rating: 2,
+        depth: 0
+    },
+    {
+        id: '1',
+        postId: '6',
+        thread: "lopate",
+        title: "jel prodaje neko lopatu malu kasikastu za arheologiju. nudim 20din",
+        author: "m1ndor",
+        content: "a brt mnogo mi to aj za 2 din.",
+        repplyTo: "ljubomirlopate2023",
+        publishedDate: "12.09.2023",
+        rating: -2,
+        depth: 1
+    },
+    {
+        id: '2',
+        postId: '6',
+        thread: "lopate",
+        title: "jel prodaje neko lopatu malu kasikastu za arheologiju. nudim 20din",
+        author: "lopate.com",
+        content: "Imamo na sajtu.",
+        repplyTo: "m1ndor",
+        publishedDate: "12.09.2023",
+        rating: 2,
+        depth: 0
+    },
+    {
+        id: '3',
+        postId: '4',
+        thread: "tenkovi",
+        title: "ja jako volim tenkove :)",
+        author: "milanEKSODIJA",
+        content: "JA MNOGO VOLIM DA SEIGRAM SA TENKOVIMA",
+        repplyTo: null,
+        publishedDate: "12.09.2023",
+        rating: 2,
+        depth: 0
+    },
+    {
+        id: '4',
+        postId: '4',
+        thread: "tenkovi",
+        title: "ja jako volim tenkove :)",
+        author: "wotBOG",
+        content: "NUBOVIIII.",
+        repplyTo: "milanEKSODIJA",
+        publishedDate: "12.09.2023",
+        rating: -2,
+        depth: 1
+    },
+    {
+        id: '5',
+        postId: '0',
+        thread: "politika",
+        title: "Vucic budala",
+        author: "marchel0legend",
+        content: "Jebem ti drzawu...",
+        repplyTo: null,
+        publishedDate: "12.09.2023",
+        rating: 2,
+        depth: 0
+    },
+    {
+        id: '6',
+        postId: '0',
+        thread: "politika",
+        title: "Vucic budala",
+        author: "djoka33",
+        content: "exercitation ullamco labori",
+        repplyTo: "marchel0legend",
+        publishedDate: "12.09.2023",
+        rating: 12,
+        depth: 1
+    },
+    {
+        id: '7',
+        postId: '0',
+        thread: "politika",
+        title: "Vucic budala",
+        author: "kecanje",
+        content: "jebem ti mater",
+        repplyTo: "djoka33",
+        publishedDate: "12.09.2023",
+        rating: 4,
+        depth: 2
+    }
+]
+
+database.users = [
+    {
+        name: "ekskalibur",
+    },
+    {
+        name: "djoka33",
+    },
+    {
+        name: "kopernikus",
+    },
+    {
+        name: "gugladzija",
+    },
+    {
+        name: "marchel0legend",
+    },
+    {
+        name: "zidan69",
+    },
+    {
+        name: "seksi_maradona",
+    },
+    {
+        name: "kurcevitirondalno",
+    },
+    {
+        name: "seksimaradona",
+    },
+    {
+        name: "m1ndor",
+    },
+    {
+        name: "ljubomirlopate2023",
+    },
+    {
+        name: "lopate.rs",
+    },
+    {
+        name: "treceoko",
+    },
+    {
+        name: "gavrilo7",
+    },
+    {
+        name: "milanEKSODIJA",
+    },
+    {
+        name: "wotBOG",
+    },
+    {
+        name: "nark0man",
+    },
+]
+
+const createUser = (username, password) => {
+    database.users.push(
+        {
+            username: username,
+            password: password
+        }
+    )
+}
+
+const createThread = (name, admin) => {
+    database.threads.push(
+        {
+            name: name,
+            admin: admin,
+            mods: [],
+            dateCreated: "12.09.2023",
+            members: [admin]
+        },
+    )
+}
+
+database.addThreadMember = (thread, member) => {
+    const index = database.thread.findIndex(thread => thread.name === thread)
+
+    database.thread[index].members.push(member)
+}
+
+database.createPost = (author, thread, title, content) => {
+    database.posts.push(
+        {
+            thread: thread,
+            author: author,
+            title: title,
+            content: content,
+            comments: []
+        }
+    )
+}
+
+database.createComment = (postTitle, author, comment, id = undefined) => {
+    let originalComment;
+    if (id) {
+        originalComment = database.comment.find((comment) => {
+            return database.comment.id === id
+        })
+    }
+    database.comments.push(
+        {
+            id: Math.random().toString(),
+            title: postTitle,
+            author: author,
+            content: comment,
+            repplyTo: id ? originalComment.author : null,
+            publishedDate: "12.09.2023",
+            rating: 0,
+            depth: id ? ++originalComment.depth : 0
+        }
+    )
+}
+
+database.deleteComment = (id) => {
+    database.comments = database.comments.filter((comment) => comment.id !== id)
+}
+
+database.deletePost = (title) => {
+    database.posts = database.posts.filter((post) => post.title !== title)
+}
+
+database.getPost = (title) => {
+    return database.posts.filter(post => post.title === title)
+}
+
+database.getThreadPosts = (thread) => {
+    return database.posts.filter(post => post.thread === thread)
+}
+
+database.getPostComments = (title) => {
+    return database.comments.filter(comment => comment.title === title)
+}
+
+database.getUserPosts = (user) => {
+    return database.posts.filter(post => post.author === user)
+}
+
+database.getUserComments = (user) => {
+    return database.comments.filter(comment => comment.author === user)
+}
+
+database.getUserThreads = (user) => {
+    return database.threads.filter(thread => thread.admin === user || thread.mods.has(user))
+}
+
+export default database
