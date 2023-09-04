@@ -356,14 +356,14 @@ database.users = [
   },
 ];
 
-const createUser = (username, password) => {
+database.createUser = (username, password) => {
   database.users.push({
     username: username,
     password: password,
   });
 };
 
-const createThread = (name, admin) => {
+database.createThread = (name, admin) => {
   database.threads.push({
     name: name,
     admin: admin,
@@ -389,24 +389,26 @@ database.createPost = (author, thread, title, content) => {
   });
 };
 
-database.createComment = (postTitle, author, comment, id = undefined) => {
-  let originalComment;
-  if (id) {
-    originalComment = database.comment.find((comment) => {
-      return database.comment.id === id;
-    });
-  }
-  database.comments.push({
-    id: Math.random().toString(),
-    title: postTitle,
-    author: author,
-    content: comment,
-    repplyTo: id ? originalComment.author : null,
-    publishedDate: "12.09.2023",
-    rating: 0,
-    depth: id ? ++originalComment.depth : 0,
-  });
-};
+database.createComment = (postId, author, comment, id = undefined) => {
+    let originalComment;
+    if (id) {
+        originalComment = database.comment.find((comment) => {
+            return database.comment.id === id
+        })
+    }
+    database.comments.push(
+        {
+            id: Math.random().toString(),
+            postId: postId,
+            author: author,
+            content: comment,
+            repplyTo: id ? originalComment.author : null,
+            publishedDate: "12.09.2023",
+            rating: 0,
+            depth: id ? ++originalComment.depth : 0
+        }
+    )
+}
 
 database.deleteComment = (id) => {
   database.comments = database.comments.filter((comment) => comment.id !== id);
@@ -424,9 +426,9 @@ database.getThreadPosts = (thread) => {
   return database.posts.filter((post) => post.thread === thread);
 };
 
-database.getPostComments = (title) => {
-  return database.comments.filter((comment) => comment.title === title);
-};
+database.getPostComments = (id) => {
+    return database.comments.filter(comment => comment.postId === id)
+}
 
 database.getUserPosts = (user) => {
   return database.posts.filter((post) => post.author === user);
