@@ -1,0 +1,13 @@
+.single-comment-meta {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.single-comment-meta-author {
+    width: fit-content;
+    display: inline;
+    margin-left: 10px;
+}

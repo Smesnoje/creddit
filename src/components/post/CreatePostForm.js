@@ -1,14 +1,15 @@
 import React from "react";
-import Input from "../shared/elements/Input";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 
+import Input from "../shared/elements/Input";
+import TextArea from "../shared/elements/TextArea";
+import Button from "../shared/elements/Button";
 import database from "../database";
 
 import "./CreatePostForm.css";
 
 const CreatePostForm = (props) => {
-
 
   const currentThread = useParams().thread;
 
@@ -42,15 +43,17 @@ const CreatePostForm = (props) => {
 
   return (
     <div className="post-form__wrapper">
+      <div className="post-form-heading">Create a new post:</div>
       <form className="post-form" id="post-form" onSubmit={PostSubmitHandler}>
-        <Input placeholder="Title" handleChange={inputValueHandler} />
-        <Input
+        <Input className="post-form-title-input" placeholder="Title" handleChange={inputValueHandler} />
+        <TextArea
+          className="post-form-content-input"
           placeholder="Content"
           type="textarea"
           handleChange={textareaValueHandler}
         />
 
-        <button type="submit">Submit</button>
+        <Button className="post-form-submit" type="submit">Submit</Button>
       </form>
     </div>
   );

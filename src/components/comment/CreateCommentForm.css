@@ -1,9 +1,4 @@
-.post-form-title-input {
-    margin-top: 10px;
-    width: 220px;
-}
-
-.post-form-content-input {
+.comment-form-input {
     margin-top: 10px;
     display: block;
     width: 100%;
@@ -12,17 +7,17 @@
     box-sizing: border-box;
 }
 
-.post-form-submit {
+.comment-form-submit {
     margin-top: 10px;
 }
 
-.post-form-heading {
+.comment-form-heading {
     width: fit-content;
     height: fit-content;
     font-size: 1.8em;
     color: #bbb
 }
-.post-form__wrapper {
+.comment-form__wrapper {
     margin-top: 10px;
     background-color: #111;
 }

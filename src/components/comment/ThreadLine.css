@@ -1,17 +1,22 @@
 .thread-line {
+    margin-top: auto;
     height: 100%;
-    display: inline;
+    display: inline-flex;
+}
+
+.root-line {
+    height: 30%;
 }
 
 .thread-line-body {
-    border-right: solid white 1px;
+    border-right: solid gray 3px;
     height: 100%;
-    width: 10px;
+    width: 18px;
     display: inline;
 }
 
 .thread-line-margin {
     height: 100%;
-    margin: 10px;
+    margin: 8px;
     display: inline;
 }

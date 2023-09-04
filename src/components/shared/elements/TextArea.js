@@ -1,13 +1,13 @@
 import React from 'react'
 
-import './Input.css'
+import './TextArea.css'
 
-const Input = (props) => {
+const TextArea = (props) => {
   return (
     // U Input proslediti inputPlaceholder i type 
     <>
         {props.labelText && <label htmlFor={props.inputId}>{props.labelText}</label>}
-        <input 
+        <textarea 
           className={props.className} 
           id={props.inputId} 
           name={props.name} 
@@ -18,9 +18,9 @@ const Input = (props) => {
           rows={props.rows}
           cols={props.cols}
           >
-        </input>
+        </textarea>
     </>
   )
 }
 
-export default Input
+export default TextArea

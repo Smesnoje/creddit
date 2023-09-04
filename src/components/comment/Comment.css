@@ -1,5 +1,16 @@
-.comment-container {
+.single-comment-container {
     width: fit-content;
     display: inline;
-    margin: -10px;
+    margin-left: -43px;    
+    padding-top: 10px;
+}
+
+.single-comment-content {
+    margin-top: 10px;
+    max-width: 100%;
+    height: fit-content;
+    display: block;
+    font-size: 0.7em;
+    margin-left: 40px;
+    background-color: #333;
 }

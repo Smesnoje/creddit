@@ -132,7 +132,6 @@ database.comments = [
         id: '0',
         postId: '6',
         thread: "lopate",
-        title: "jel prodaje neko lopatu malu kasikastu za arheologiju. nudim 20din",
         author: "ljubomirlopate2023",
         content: "Imam ja kolega 22 dinara.",
         repplyTo: null,
@@ -144,7 +143,6 @@ database.comments = [
         id: '1',
         postId: '6',
         thread: "lopate",
-        title: "jel prodaje neko lopatu malu kasikastu za arheologiju. nudim 20din",
         author: "m1ndor",
         content: "a brt mnogo mi to aj za 2 din.",
         repplyTo: "ljubomirlopate2023",
@@ -156,7 +154,6 @@ database.comments = [
         id: '2',
         postId: '6',
         thread: "lopate",
-        title: "jel prodaje neko lopatu malu kasikastu za arheologiju. nudim 20din",
         author: "lopate.com",
         content: "Imamo na sajtu.",
         repplyTo: "m1ndor",
@@ -168,7 +165,6 @@ database.comments = [
         id: '3',
         postId: '4',
         thread: "tenkovi",
-        title: "ja jako volim tenkove :)",
         author: "milanEKSODIJA",
         content: "JA MNOGO VOLIM DA SEIGRAM SA TENKOVIMA",
         repplyTo: null,
@@ -180,7 +176,6 @@ database.comments = [
         id: '4',
         postId: '4',
         thread: "tenkovi",
-        title: "ja jako volim tenkove :)",
         author: "wotBOG",
         content: "NUBOVIIII.",
         repplyTo: "milanEKSODIJA",
@@ -192,7 +187,6 @@ database.comments = [
         id: '5',
         postId: '0',
         thread: "politika",
-        title: "Vucic budala",
         author: "marchel0legend",
         content: "Jebem ti drzawu...",
         repplyTo: null,
@@ -204,7 +198,6 @@ database.comments = [
         id: '6',
         postId: '0',
         thread: "politika",
-        title: "Vucic budala",
         author: "djoka33",
         content: "exercitation ullamco labori",
         repplyTo: "marchel0legend",
@@ -216,7 +209,6 @@ database.comments = [
         id: '7',
         postId: '0',
         thread: "politika",
-        title: "Vucic budala",
         author: "kecanje",
         content: "jebem ti mater",
         repplyTo: "djoka33",
@@ -280,7 +272,7 @@ database.users = [
     },
 ]
 
-const createUser = (username, password) => {
+database.createUser = (username, password) => {
     database.users.push(
         {
             username: username,
@@ -289,7 +281,7 @@ const createUser = (username, password) => {
     )
 }
 
-const createThread = (name, admin) => {
+database.createThread = (name, admin) => {
     database.threads.push(
         {
             name: name,
@@ -319,7 +311,7 @@ database.createPost = (author, thread, title, content) => {
     )
 }
 
-database.createComment = (postTitle, author, comment, id = undefined) => {
+database.createComment = (postId, author, comment, id = undefined) => {
     let originalComment;
     if (id) {
         originalComment = database.comment.find((comment) => {
@@ -329,7 +321,7 @@ database.createComment = (postTitle, author, comment, id = undefined) => {
     database.comments.push(
         {
             id: Math.random().toString(),
-            title: postTitle,
+            postId: postId,
             author: author,
             content: comment,
             repplyTo: id ? originalComment.author : null,
@@ -356,8 +348,8 @@ database.getThreadPosts = (thread) => {
     return database.posts.filter(post => post.thread === thread)
 }
 
-database.getPostComments = (title) => {
-    return database.comments.filter(comment => comment.title === title)
+database.getPostComments = (id) => {
+    return database.comments.filter(comment => comment.postId === id)
 }
 
 database.getUserPosts = (user) => {

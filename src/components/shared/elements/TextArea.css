@@ -1,0 +1,20 @@
+textarea {
+    border-radius: 0.5em;
+    border: none;
+    background-color: #212121;
+    padding: 2px 10px;
+    outline: none;
+}
+
+textarea:focus {
+    border: none;
+}
+
+textarea:focus::placeholder {
+    color: transparent;
+}
+
+label {
+    height: fit-content;
+    margin-right: 10px;
+}

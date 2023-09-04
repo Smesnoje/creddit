@@ -2,9 +2,9 @@ import React from 'react'
 
 import './Button.css'
 
-const Button = () => {
+const Button = (props) => {
   return (
-    <div>Button</div>
+    <button type={props.type} className={`custom-button ${props.className}`}>{props.children}</button>
   )
 }
 
