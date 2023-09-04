@@ -27,6 +27,8 @@ const CreatePostForm = (props) => {
 
     console.log(props);
     props.change();
+    setPostTitle('');
+    setPostContent('');
   };
 
   const inputValueHandler = (event) => {
@@ -43,11 +45,12 @@ const CreatePostForm = (props) => {
   return (
     <div className="post-form__wrapper">
       <form className="post-form" id="post-form" onSubmit={PostSubmitHandler}>
-        <Input placeholder="Title" handleChange={inputValueHandler} />
+        <Input placeholder="Title" handleChange={inputValueHandler} value={postTitle} />
         <Input
           placeholder="Content"
           type="textarea"
           handleChange={textareaValueHandler}
+          value={postContent}
         />
 
         <button type="submit">Submit</button>
