@@ -47,14 +47,8 @@ const CreatePostForm = (props) => {
     <div className="post-form__wrapper">
       <div className="post-form-heading">Create a new post:</div>
       <form className="post-form" id="post-form" onSubmit={PostSubmitHandler}>
-<<<<<<< HEAD
-        <Input className="post-form-title-input" placeholder="Title" handleChange={inputValueHandler} />
-        <TextArea
-          className="post-form-content-input"
-=======
         <Input placeholder="Title" handleChange={inputValueHandler} value={postTitle} />
         <Input
->>>>>>> origin/main
           placeholder="Content"
           type="textarea"
           handleChange={textareaValueHandler}
