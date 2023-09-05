@@ -12,7 +12,7 @@ const Login = () => {
             <Center>
                 <div className="login-form_wrapper">
                     <LoginForm/>
-                </div>;
+                </div>
             </Center>
             <Right>
             </Right>

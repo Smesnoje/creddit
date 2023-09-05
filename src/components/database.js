@@ -356,11 +356,16 @@ database.users = [
   },
 ];
 
-database.createUser = (username, password) => {
+database.createUser = (username, password, mail, profilePicture) => {
   database.users.push({
     username: username,
     password: password,
+    mail,
+    profilePicture,
   });
+};
+database.getUser = (username) => {
+  return database.users.find((user) => user.name === username);
 };
 
 database.createThread = (name, admin) => {

@@ -14,6 +14,7 @@ const CommentTeaser = (props) => {
       id={`comment-${props.id}`}
     >
       <CommentMeta
+         
         author={props.author} 
         parentThread={props.parentThread} 
         repplyTo={props.repplyTo} 

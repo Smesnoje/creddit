@@ -1,5 +1,6 @@
 import React from 'react'
 import { useParams } from 'react-router-dom';
+import database from '../components/database';
 
 import UserFeed from '../components/UserFeed'
 import Card from '../components/shared/elements/Card';
@@ -10,6 +11,8 @@ import './User.css'
 const User = (props) => {
 
   const passedUsername = useParams().username;
+  const currentUserObject = database.getUser(passedUsername);
+  console.log(currentUserObject)
 
   return (
         <>
@@ -18,7 +21,7 @@ const User = (props) => {
             <Center>
               <div className='user-container'>
                 <Card className='user-container-card'>
-                <img className='user-image' src="https://c.cdnmp.net/241860914/p/l/5/bullyland-patuljak-uca-snezana-i-7-patuljaka-12476-c~1073075.jpg" alt="patuljak"></img>
+                <img className='user-image' src={currentUserObject.profilePicture} alt="patuljak"></img>
                 <div className='user-name'>{passedUsername}</div>
                 <div className='user-bio'>
                   <Card>
