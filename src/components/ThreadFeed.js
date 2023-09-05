@@ -11,7 +11,7 @@ const ThreadFeed = (props) => {
                 return post.thread === props.thread &&
                 <ThreadPostTeaser
                 key={key}
-                id={key} 
+                id={post.id} 
                 parentThread={post.thread} 
                 author={post.author} 
                 date={post.publishedDate}

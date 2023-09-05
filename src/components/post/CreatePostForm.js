@@ -16,17 +16,10 @@ const CreatePostForm = (props) => {
   const PostSubmitHandler = (event) => {
     event.preventDefault();
 
-    database.posts.push({
-      id: "42",
-      thread: currentThread,
-      author: "ekskalibur",
-      title: postTitle,
-      content: postContent,
-      publishedDate: "420.02.2021",
-      rating: "infinite",
-    });
+    database.createPost('djokica', currentThread, postTitle, postContent)
 
-    console.log(props);
+    setPostTitle('')
+    setPostContent('')
     props.change();
   };
 
@@ -45,8 +38,9 @@ const CreatePostForm = (props) => {
     <div className="post-form__wrapper">
       <div className="post-form-heading">Create a new post:</div>
       <form className="post-form" id="post-form" onSubmit={PostSubmitHandler}>
-        <Input className="post-form-title-input" placeholder="Title" handleChange={inputValueHandler} />
+        <Input className="post-form-title-input" placeholder="Title" handleChange={inputValueHandler} value={postTitle}/>
         <TextArea
+          value={postContent}
           className="post-form-content-input"
           placeholder="Content"
           type="textarea"

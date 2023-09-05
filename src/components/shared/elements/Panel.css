@@ -1,0 +1,19 @@
+.panel {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.panel-title {
+    padding: 10px;
+    box-sizing: border-box;
+    width: 100%;
+    background-color: #212121;
+}
+
+.panel-content {
+    padding: 10px;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 300px;
+    background-color: black;
+}

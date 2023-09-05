@@ -381,6 +381,7 @@ database.addThreadMember = (thread, member) => {
 
 database.createPost = (author, thread, title, content) => {
   database.posts.push({
+    id: Math.random().toString(),
     thread: thread,
     author: author,
     title: title,

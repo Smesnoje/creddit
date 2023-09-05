@@ -11,7 +11,7 @@ const UserFeed = (props) => {
             {[...database.posts.map((post, key) => {
                 return post.author === props.author && <ThreadPostTeaser
                 key={key}
-                id={key} 
+                id={post.id} 
                 parentThread={post.thread} 
                 author={post.author} 
                 date={post.publishedDate}

@@ -1,4 +1,32 @@
 main {
-    max-width: 60%;
-    margin: auto;
+    max-width: 100%;
+    min-height: 100vh;
+    display: flex;
+}
+
+:root{
+    --center-width: 60%;
+    --section-padding: 20px;
+}
+
+.layout-center {
+    width: var(--center-width);
+    box-sizing: border-box;
+    padding: var(--section-padding);
+}
+
+.layout-left {
+    width: calc((100% - var(--center-width)) / 2);
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: var(--section-padding);
+}
+
+.layout-right {
+    width: calc((100% - var(--center-width)) / 2);
+    display: flex;    
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: var(--section-padding);
 }

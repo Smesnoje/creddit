@@ -10,7 +10,7 @@ export const Feed = () => {
             {database.posts.map((post, key) => {
                 return <ThreadPostTeaser
                     key={key}
-                    id={key} 
+                    id={post.id} 
                     parentThread={post.thread} 
                     author={post.author} 
                     date={post.publishedDate}

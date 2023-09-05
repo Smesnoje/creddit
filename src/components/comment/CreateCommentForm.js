@@ -2,7 +2,6 @@ import React from "react";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 
-import Input from "../shared/elements/Input";
 import TextArea from "../shared/elements/TextArea";
 import Button from "../shared/elements/Button";
 import database from "../database";
@@ -10,7 +9,6 @@ import database from "../database";
 import "./CreateCommentForm.css";
 
 const CreateCommentForm = (props) => {
-
   const postId = useParams().postId;
 
   const PostSubmitHandler = (event) => {
@@ -18,6 +16,7 @@ const CreateCommentForm = (props) => {
 
     database.createComment(postId, 'djolerina', postComment)
 
+    setPostComment('')
     console.log(postComment);
     props.change();
   };
@@ -33,6 +32,7 @@ const CreateCommentForm = (props) => {
       <div className="comment-form-heading">Write a comment:</div>
       <form className="comment-form" id="comment-form" onSubmit={PostSubmitHandler}>
         <TextArea
+          value={postComment}
           className="comment-form-input"
           placeholder="Type here..."
           type="textarea"
