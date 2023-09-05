@@ -428,6 +428,10 @@ database.getPost = (title) => {
   return database.posts.filter((post) => post.title === title);
 };
 
+database.getThread = (name) => {
+  return database.threads.filter((thread) => thread.name === name)[0];
+};
+
 database.getThreadPosts = (thread) => {
   return database.posts.filter((post) => post.thread === thread);
 };

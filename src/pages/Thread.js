@@ -6,6 +6,7 @@ import ThreadFeed from "../components/ThreadFeed";
 import CreatePostForm from "../components/post/CreatePostForm";
 import { Left, Center, Right } from '../components/shared/Layout'
 import Panel from "../components/shared/elements/Panel";
+import ProfilePicture from '../components/shared/elements/ProfilePicture'
 
 import "./Thread.css";
 
@@ -18,11 +19,19 @@ const Thread = () => {
 
   const passedThread = useParams().thread;
 
+  const threadInfo = database.getThread(passedThread)
+
+  console.log(threadInfo)
+
   return (
     <>
       <Left>
         <Panel panelTitle="About thread">
-          govance
+          <ProfilePicture src='https://s.cdnmpro.com/465736621/p/l/7/lopata-kockasta-105-muta~5397.jpg'/>
+          <div>
+            Creator: {threadInfo.admin}
+          </div>
+          Members: {threadInfo.members.length}
         </Panel>
       </Left>
       <Center>

@@ -5,12 +5,14 @@ import CommentTeaser from './comment/CommentTeaser'
 
 import database from './database'
 
+import './Feed.css'
+
 const UserFeed = (props) => {
     return (
         <div id='feed-container'>
             {[...database.posts.map((post, key) => {
                 return post.author === props.author && <ThreadPostTeaser
-                key={key}
+                key={post.id}
                 id={post.id} 
                 parentThread={post.thread} 
                 author={post.author} 
@@ -22,7 +24,7 @@ const UserFeed = (props) => {
             }), 
             ...database.getUserComments(props.author).map((comment, key) => {
                 return <CommentTeaser
-                key={key}
+                key={comment.id}
                 id={comment.id} 
                 postId={comment.postId}
                 parentThread={comment.thread} 

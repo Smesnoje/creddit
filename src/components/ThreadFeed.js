@@ -4,6 +4,8 @@ import ThreadPostTeaser from './post/ThreadPostTeaser'
 
 import database from './database'
 
+import './Feed.css'
+
 const ThreadFeed = (props) => {
     return (
         <div id='feed-container'>
