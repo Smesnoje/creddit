@@ -19,7 +19,9 @@
     font-size: 1.2em;
     height: fit-content;
 }
-
+.login-submit-button:disabled{
+    pointer-events: none;;
+}
 .signup-instead {
     margin-top: 20px;
 }
