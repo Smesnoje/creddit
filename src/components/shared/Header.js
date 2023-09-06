@@ -1,8 +1,8 @@
 import React from "react";
 
 import Menu from "./navigation/Menu";
-import Input from "./elements/Input";
 import Search from "./navigation/Search";
+import LoginLogout from "./navigation/LoginLogout";
 
 import "./Header.css";
 
@@ -12,6 +12,7 @@ const Header = () => {
     <header className="main-header">
       <Menu />
       <Search />
+      <LoginLogout />
     </header>
   );
 };

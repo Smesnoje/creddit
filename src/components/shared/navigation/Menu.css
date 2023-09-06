@@ -10,7 +10,9 @@
   color: #888888;
   text-decoration: none;
   margin-right: 20px;
-  font-size: 1.2em;
+  font-size: 1.3em;
+  width: fit-content;
+  white-space: nowrap;
 }
 
 .nav-link__item.active {

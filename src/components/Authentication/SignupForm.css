@@ -1,0 +1,21 @@
+.signup-username, .signup-password, .signup-profile-picture, .signup-email {
+    display: block;
+    width: fit-content;
+    padding: 10px;
+    margin-top: 15px;
+    font-size: 1.5em;
+}
+
+.signup-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.signup-submit-button {
+    padding: 5px;
+    margin-top: 10px;
+    font-size: 1.2em;
+    height: fit-content;
+}

@@ -1,0 +1,25 @@
+.login-username, .login-password {
+    display: block;
+    width: fit-content;
+    padding: 10px;
+    margin-top: 15px;
+    font-size: 1.5em;
+}
+
+.login-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.login-submit-button {
+    padding: 5px;
+    margin-top: 10px;
+    font-size: 1.2em;
+    height: fit-content;
+}
+
+.signup-instead {
+    margin-top: 20px;
+}

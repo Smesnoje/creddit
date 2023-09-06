@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import database from "../database";
 
 import Input from "../shared/elements/Input";
+import Button from "../shared/elements/Button"
+
+import "./SignupForm.css"
 
 const SignupForm = () => {
   const [username, setUsername] = useState("");
@@ -35,20 +38,23 @@ const SignupForm = () => {
   };
 
   return (
-    <form onSubmit={signupSubmitHandler}>
+    <form className="signup-form" onSubmit={signupSubmitHandler}>
       <Input
+        className="signup-username"
         type="text"
         placeholder="Your Username"
         value={username}
         handleChange={usernameChangeHandler}
       />
       <Input
+        className="signup-email"
         type="text"
         placeholder="Your Email"
         value={email}
         handleChange={emailChangeHandler}
       />
       <Input
+        className="signup-profile-picture"
         type="text"
         placeholder="Your Profile Picture URL"
         value={pictureURL}
@@ -56,11 +62,12 @@ const SignupForm = () => {
       />
 
       <Input
+        className="signup-password"
         type="password"
         handleChange={passwordChangeHandler}
         value={password}
       />
-      <button type="submit">Submit</button>
+      <Button className="signup-submit-button" type="submit">Submit</Button>
     </form>
   );
 };

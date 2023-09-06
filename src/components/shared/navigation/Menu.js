@@ -12,9 +12,17 @@ const Menu = () => {
       >
         Home
       </NavLink>
+
       <NavLink
-          to="/u/retard_autobus"
-          className="nav-link__item"
+        to="/newthread"
+        className="nav-link__item"
+      >
+        Create Thread
+      </NavLink>
+
+      <NavLink
+        to="/u/retard_autobus"
+        className="nav-link__item"
       >
         Profile
       </NavLink>
