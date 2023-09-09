@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import Wrapper from "./components/shared/Wrapper";
 import Home from "./pages/Home";
@@ -15,7 +15,9 @@ import "./App.css";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 
 function App() {
-  
+  const [loggedIn, setLoggedIn] = useState(false)
+  const [userId, setUserId] = useState()
+
   return (
     <React.Fragment>
       <Router>
