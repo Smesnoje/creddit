@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 
 import AuthenticationHandler from "./AuthenticationHandler";
-import useHttp from "../../hooks/useHttp";
+import useHttpClient from "../../hooks/useHttp";
 
 import Input from "../shared/elements/Input";
 import Button from "../shared/elements/Button";
@@ -10,9 +10,16 @@ import Button from "../shared/elements/Button";
 import "./LoginForm.css";
 
 const LoginForm = () => {
-  const {response, error, isLoading} = useHttp('http://localhost:3001/api/login', 'GET', {})
+  const { isLoading, error, sendRequest } = useHttpClient()
   const loginSubmitHandler = async (event) => {
     event.preventDefault();
+
+    try {
+      const responseData = await sendRequest('http://localhost:3001/api/user/login', 'POST', { username: username, password: password }, { 'Content-Type': 'application/json' })
+      console.log(responseData)
+    } catch (err) {
+      console.log(err)
+    } 
     
     setIsLoggedIn(true);
     setUsername("");

@@ -1,38 +1,59 @@
-import { useState, useEffect } from 'react'
+import { useState, useCallback, useEffect, useRef } from "react";
 
-const useHttp = (url, method, body) => {
-    const [data, setData] = useState(null)
-    const [isLoading, setIsLoading] = useState(true)
-    const [error, setError] = useState(null)
+function useHttpClient() {
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState();
 
-    useEffect(() => {
-    async function fetchData() {
-        try {
-            const response = await fetch(url, {
-              method: method,
-              headers: {
-                "Content-Type": "application/json",
-              },
-              body: JSON.stringify(body),
-            })
+  const activeHttpRequest = useRef([]);
 
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }      
-    
-            const responseData = await response.json();
-            setData(responseData)
-            setIsLoading(false)
-        } catch (err) {
-            setError(err)
-            setIsLoading(false)
+  const sendRequest = useCallback(
+    async (url, method = "GET", body = null, headers = {}) => {
+      setIsLoading(true);
+      const httpAbortCtrl = new AbortController();
+      activeHttpRequest.current.push(httpAbortCtrl);
+      try {
+        const response = await fetch(url, {
+          method,
+          body: JSON.stringify(body),
+          headers,
+          signal: httpAbortCtrl.signal,
+        });
+
+        const responseData = await response.json();
+
+        activeHttpRequest.current = activeHttpRequest.current.filter(
+          (reqCtrl) => reqCtrl !== httpAbortCtrl
+        );
+
+        if (!response.ok) {
+          throw new Error(responseData.message);
         }
-    }
 
-    fetchData()
-    }, [url, method, body])
+        setIsLoading(false);
+        return responseData;
+      } catch (err) {
+        if (err.name !== "AbortError") {
+          setError(err.message);
+          throw err;
+        }
+    } finally {
+        setIsLoading(false);
+      }
+    },
+    []
+  );
 
-    return { data, isLoading, error }
+  const clearError = () => {
+    setError(null);
+  };
+
+  useEffect(() => {
+    return () => {
+      activeHttpRequest.current.forEach((abortCtrl) => abortCtrl.abort());
+    };
+  }, []);
+
+  return { isLoading, error, sendRequest, clearError };
 }
 
-export default useHttp
+export default useHttpClient
