@@ -15,7 +15,6 @@ const Thread = () => {
   function handleState() {
     setState(!state);
   }
-  // CallBack function which updates the Thread
 
   const passedThread = useParams().thread;
 

@@ -11,6 +11,7 @@ import "./LoginForm.css";
 
 const LoginForm = () => {
   const { isLoading, error, sendRequest } = useHttpClient()
+  
   const loginSubmitHandler = async (event) => {
     event.preventDefault();
 
@@ -25,6 +26,16 @@ const LoginForm = () => {
     setUsername("");
     setPassword("");
   };
+
+  const logoutSubmitHandler = async (event) => {
+    event.preventDefault()
+
+    try {
+      await sendRequest('http://localhost:3001/api/user/logout', 'POST', { username: username, password: password }, { 'Content-Type': 'application/json' })
+    } catch (err) {
+      console.log(err)
+    }
+  }
 
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -77,6 +88,15 @@ const LoginForm = () => {
           No Account? Signup instead.
         </NavLink>
       </form>
+      <form className="logout-form" onSubmit={logoutSubmitHandler}>
+        <Button
+            className="logout-submit-button"
+            type="submit"
+        >
+          Logout
+        </Button>
+      </form>
+
     </>
   );
 };

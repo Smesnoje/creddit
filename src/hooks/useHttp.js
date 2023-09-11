@@ -16,6 +16,7 @@ function useHttpClient() {
           method,
           body: JSON.stringify(body),
           headers,
+          credentials: 'include',
           signal: httpAbortCtrl.signal,
         });
 
